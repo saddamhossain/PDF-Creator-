@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PDF example </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	 <div id="table1">
+			<table class="table table-striped">
+			  <caption>Table striped </caption>
+			  <thead>
+				<tr>
+				  <th>#</th>
+				  <th>First Name</th>
+				  <th>Last Name</th>
+				  <th>Username</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <th scope="row">1</th>
+				  <td>Mark</td>
+				  <td>Otto</td>
+				  <td>@mdo</td>
+				</tr>
+				<tr>
+				  <th scope="row">2</th>
+				  <td>Jacob</td>
+				  <td>Thornton</td>
+				  <td>@fat</td>
+				</tr>
+				<tr>
+				  <th scope="row">3</th>
+				  <td>Larry</td>
+				  <td>the Bird</td>
+				  <td>@twitter</td>
+				</tr>
+			  </tbody>
+			</table>
+	 </div>
+	 <p>
+	 <button class="btn btn-primary" id="btn1" type="submit">Print table striped</button>
+	 </p>
+	 
+	 <br/> <br/> <br/>
+	 
+	 <div id="table2">
+			<table class="table table-bordered">
+			  <caption>Table striped </caption>
+			  <thead>
+				<tr>
+				  <th>#</th>
+				  <th>First Name</th>
+				  <th>Last Name</th>
+				  <th>Username</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <th scope="row">1</th>
+				  <td>Mark</td>
+				  <td>Otto</td>
+				  <td>@mdo</td>
+				</tr>
+				<tr>
+				  <th scope="row">2</th>
+				  <td>Jacob</td>
+				  <td>Thornton</td>
+				  <td>@fat</td>
+				</tr>
+				<tr>
+				  <th scope="row">3</th>
+				  <td>Larry</td>
+				  <td>the Bird</td>
+				  <td>@twitter</td>
+				</tr>
+			  </tbody>
+			</table>
+	 </div>
+	  <p>
+	 <button class="btn btn-success" id="btn2" type="submit">Print table striped</button>
+</p>
+</div>
+
+
+	<script src="jquery-printme.js"> </script>
+	<script>
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#table1").printMe({ "path": "bootstrap.min.css", "title": "Document title" })
+			});
+			
+			$("#btn2").click(function(){
+				$("#table2").printMe({ "path": "bootstrap.min.css", "title": "Sujat vai for you" })
+			});
+		});
+
+	</script>
+</body>
+</html>
